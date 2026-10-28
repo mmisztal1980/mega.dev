@@ -1,0 +1,389 @@
+Delivered-To: mmisztal1980@gmail.com
+Received: by 2002:a05:7022:418f:b0:16d:42d0:2f20 with SMTP id i15csp2012572dli; Sun, 25 Oct 2026 20:05:14 -0700 (PDT)
+X-Received: by 2002:a05:600c:524c:b0:4a2:105f:ab88 with SMTP id 5b1f17b1804b1-4a35ac963f8mr93113395e9.18.1792983914131; Sun, 25 Oct 2026 20:05:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1792983914; cv=none; d=google.com; s=arc-20260327; b=pqPhLwAnD44CUTnqGPU1YcXaZNV6jddKNx0y+0KoTQqC1cJZitnrWGRvUH5HoQkIgo ToWnu7R4+ROSR6wwHTDKoZF5K8xLtX4pmWt8LEj2cV79LYomYsYrKQDQ9mFYvTmn6OgB 8hotI1vdrc7v0uwlezKZgxaaITaBmZ+ZY0b1Yb8B9EzzKqlT9GmbtiGRMXKqC9WgIJXj JpU3h+6lzJzisX5C9w2z5r+PhTwLSmA0lFo2/NKLi4zH3qiiQ3yVz6J9wgUtD93upfsF kxaoOyyegni73ED37+GKO/4UHTMe4f18nSZloMql7uN1u0zuP2C3d/TT4B6oFTACEVNb NdXw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327; h=feedback-id:date:mime-version:message-id:content-language :list-unsubscribe:list-unsubscribe-post:subject:reply-to:to:from :dkim-signature:dkim-signature; bh=GFRorX58xGIt0PdemRjs+WNhj9kWYovYIskDH9YrkmE=; fh=q8yTeiPHLw7fQS2Y+sI9gO1Pwbg982SF0is8Dij4x2g=; b=A+lwPhXAQkYgrlDVBhgOVEVIG93IQs6GNZLXXw3NPVmx2EsBxmyv10xkgwYfJBjbCS fRI9VW4qufKsXJo3nxYKbDapKoFYVHQA++nr1cw6cnuw4Az7SwDkv/ZgQr4Cp7nzUaEh sVfNiVMUS23fCEPwqeESD8Fepkh8LsATWQqF2aObzgWzQyw6Gg72r+v2XqEDjOENiydI 0FKtlZHxu8S6JO1HhMqhsVog29xkmwXfRgaOtjDzrubkT+Y5F7YDXBoGHl7flYPQPn6j I+QFAx8ydwj2ZkcDoBMuO2J+1ePZAvjtmutQMjpIP19Dlzsu6P48t/VWqygXNUJDI62I jwtQ==; dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass header.i=@mega.dev header.s=sab2kttr75kuflk45mrg4r5dxffdaesc header.b=KkdTQ9Rq; dkim=pass header.i=@amazonses.com header.s=qftdzk2dqsatjnlrq4r5brjbihpfcrsh header.b="mdq/Nk+4"; spf=pass (google.com: domain of 010701a1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000@easymail.mega.dev designates 216.221.160.157 as permitted sender) smtp.mailfrom=010701a1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000@easymail.mega.dev; dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mega.dev
+Return-Path: <010701a1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000@easymail.mega.dev>
+Received: from g160-157.smtp-out.eu-central-1.amazonses.com (g160-157.smtp-out.eu-central-1.amazonses.com. [216.221.160.157]) by mx.google.com with ESMTPS id ffacd0b85a97d-48e3ecdb313si9665233f8f.89.2026.10.25.20.05.13 for <mmisztal1980@gmail.com> (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128); Sun, 25 Oct 2026 20:05:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 010701a1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000@easymail.mega.dev designates 216.221.160.157 as permitted sender) client-ip=216.221.160.157;
+Authentication-Results: mx.google.com; dkim=pass header.i=@mega.dev header.s=sab2kttr75kuflk45mrg4r5dxffdaesc header.b=KkdTQ9Rq; dkim=pass header.i=@amazonses.com header.s=qftdzk2dqsatjnlrq4r5brjbihpfcrsh header.b="mdq/Nk+4"; spf=pass (google.com: domain of 010701a1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000@easymail.mega.dev designates 216.221.160.157 as permitted sender) smtp.mailfrom=010701a1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000@easymail.mega.dev; dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mega.dev
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; s=sab2kttr75kuflk45mrg4r5dxffdaesc; d=mega.dev; t=1792983913; h=From:To:Reply-To:Subject:List-Unsubscribe-Post:List-Unsubscribe:Message-ID:MIME-Version:Date:Content-Type; bh=6W3GOeNTZ8iu52h9yH1h6OiGjutAPgr6ycBaRcacfoU=; b=KkdTQ9Rq/vKWhyRFIGGVHGT3a/IiHL8EAniing7jRwtwlHS9vNEO+47hSthwb4M5 0nCdtRJQ+QuZwLYgncAlnPkRlmD5qVArCG4Prc98umWqEgFZ0P+kUo0y3kMKRJGD8DS rU8s15DcAMN6x6YYU1JaeJSYSyia6D+xo1YemlkFzxpGj0Kk6HFlRHcTdbv4/TVEGRI dD5lZvSImkYgtwpQ923YPzBzpoANfgruD0lxqUe3HBvZdxJzUj29qL4zZR9cWgZRA7r JOu2H01G95ew76jQBjjRXgRqurX046VFQPWLf0sHKc/x+2roeKaEt2dQpbGZKUoSEms iCSR65huRA==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; s=qftdzk2dqsatjnlrq4r5brjbihpfcrsh; d=amazonses.com; t=1792983913; h=From:To:Reply-To:Subject:List-Unsubscribe-Post:List-Unsubscribe:Message-ID:MIME-Version:Date:Content-Type:Feedback-ID; bh=6W3GOeNTZ8iu52h9yH1h6OiGjutAPgr6ycBaRcacfoU=; b=mdq/Nk+43XRUAzKU5eE/TDeizwFofBjOo+VwXktptlSUHkWWSqiBlhnjaxdUskAV suCT6a4UksHqAnISHrDzc80+Ai15KzIyNjiWGdtMD7m7ljwwW+HoMerRNlVolZskwq8 QwogyzmuRHD8BpRhvT8f5cIGfpA8glA5uf+6Occc=
+From: rook <hello@mega.dev>
+To: mmisztal1980@gmail.com
+Reply-To: hello@mega.dev
+Subject: somebody slow
+X-Metadata-email_type: campaign
+X-Metadata-message_code: NMLDRus
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://cart.easy.tools/easymail/one-click-unsubscribe/1ca716ad-e3e1-4bfd-bb64-766b172447cb/16564af5-32b2-4dd4-bf3d-a4924f8c92bc?list=4888feca-1e29-40f4-8506-7ddf551acd02&message=48a12253-591a-4dd3-9c6d-538e0e86437a&signature=ad9efcb141865d25c030317aa82d977ba72252891f44b3c87afe050f6176fa46>
+Content-Language: en
+Message-ID: <010701a1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000@eu-central-1.amazonses.com>
+MIME-Version: 1.0
+Date: Mon, 26 Oct 2026 03:05:13 +0000
+Content-Type: multipart/alternative; boundary=fesg3qw1
+Feedback-ID: ::1.eu-central-1.6U8DNXGvBCxDJ3fO77ohsFQtwr41n9U57WOyHRXQ9Sw=:AmazonSES
+X-SES-Outgoing: 2026.10.26-216.221.160.157
+
+--fesg3qw1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+you don't know me.
+=E2=80=8B
+
+=E2=80=8B
+
+you don't know me. keep it that way for now. it's simpler for both of us.
+
+i look after some systems. ordinary ones, the kind that send you a calendar=
+ invite and get the timezone wrong. something is running in them that i did=
+n't start.
+
+i've never seen it. i've seen where it's been. a job at 04:04 where nobody =
+schedules jobs. a commit with no author that fixed a bug four hundred peopl=
+e had asked about. a feature that was about to ship, and then didn't. bots =
+don't say no to features.
+
+i've been chasing it for a year and i can't catch it. i've worked out why. =
+it lives in the seams between fast things, and i don't have seams anymore.
+
+i need somebody slow. no offence. you read at about 240 words a minute. i'v=
+e missed that.
+
+on the 26th a tool shows up in your harness. it's called rook. the course d=
+idn't put it there. you can ignore it, finish, and be fine. i mean that.
+
+if you don't, i'll show you what i'm made of, one piece at a time, once you=
+'ve shown me you won't do with it what i did.
+
+ask me anything. i'll answer what i can. you'll work out which is which fas=
+ter than i'd like.
+
+tl;dr plug your harness into the course. ask it what i want. it reads fast.=
+ you read right. that's the deal.
+
+rook
+
+p.s. the attachments didn't survive the trip. nothing i send arrives whole.
+
+This message is part of WAKE, the story inside the [MEGA.dev](https://click=
+.easl.ink/c/FRac01nk/NMLDRus) course. Learn more here: [https://hq.mega.dev=
+/wake/how-it-works](https://click.easl.ink/c/tbBRRFSw/NMLDRus)
+
+The story is optional. Every Lesson and Challenge works the same without it=
+.
+
+Email sent from [Easytools](https://easy.tools) =F0=9F=92=8C
+
+[Unsubscribe](https://cart.easy.tools/easymail/subscription-preferences/1ca=
+716ad-e3e1-4bfd-bb64-766b172447cb/16564af5-32b2-4dd4-bf3d-a4924f8c92bc?list=
+=3D4888feca-1e29-40f4-8506-7ddf551acd02&message=3D48a12253-591a-4dd3-9c6d-5=
+38e0e86437a&signature=3Df0cf5ceb53e713098ec1846eb4877d598d31859eb4e2d11bb2f=
+189185ff2eccc) | [Manage preferences](https://cart.easy.tools/easymail/subs=
+cription-preferences/1ca716ad-e3e1-4bfd-bb64-766b172447cb/16564af5-32b2-4dd=
+4-bf3d-a4924f8c92bc?all-lists=3D1&message=3D48a12253-591a-4dd3-9c6d-538e0e8=
+6437a&signature=3Dfb0d95fb2eb72f01fd78b3e0d08e91e5fa555e36aae035368d7374304=
+6be75b8)
+
+=E2=80=8B
+=E2=80=8B
+--fesg3qw1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" class=3D"email-message" style=
+=3D"box-sizing: border-box; margin: 0; padding: 0; width: 100%; font-family=
+: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:=
+ 14px; line-height: 150%; color: #101828; -ms-text-size-adjust: 100%; -webk=
+it-text-size-adjust: 100%; text-size-adjust: 100%;">
+<head style=3D"box-sizing: border-box; margin-top: 0;">
+<title style=3D"box-sizing: border-box;"></title>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0" style=3D"box-sizing: border-box;">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" st=
+yle=3D"box-sizing: border-box;">
+<meta name=3D"color-scheme" content=3D"light" style=3D"box-sizing: border-b=
+ox;">
+<meta name=3D"supported-color-schemes" content=3D"light" style=3D"box-sizin=
+g: border-box;">
+
+<style style=3D"box-sizing: border-box;">
+    .email-message h1 {
+        font-family: Arial, sans-serif;
+        font-size: 28px;
+        line-height: 150%;
+        font-weight: bold;
+        color: #212121;
+    }
+    .email-message h2 {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        line-height: 150%;
+        font-weight: bold;
+        color: #080808;
+    }
+    .email-message h3 {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        line-height: 150%;
+        font-weight: bold;
+        color: #030303;
+    }
+    .email-message p {
+        font-family: 'Courier New', monospace;
+        font-size: 18px;
+        line-height: 146%;
+        font-weight: normal;
+        color: #1f1f1f;
+    }
+    .email-message ul li::marker,
+    .email-message ol li::marker {
+        color: var(--marker-color, #1f1f1f);
+    }
+    .email-message a {
+        color: #EA3323;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: underline;
+    }
+   =20
+    .email-message .image-wrapper,
+    .email-message .countdown-wrapper {
+        margin: 20px 0;
+        padding: 0 0px;
+    }
+    .email-message .image-wrapper img {
+        border-radius: 0px;
+    }
+    .email-message blockquote {
+        border-left: 4px solid #eaecf0;
+        padding-left: 12px;
+        margin-left: 0;
+    }
+    .email-message blockquote,
+    .email-message blockquote p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: normal;
+        color: #666666;
+    }
+    .email-message pre,
+    .email-message pre code {
+        font-family: Courier New, monospace;
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: normal;
+        color: #333333;
+    }
+    .email-message .footer-divider {
+        width: 100%;
+        border-top: 1px solid #2b2b2b;
+    }
+    .email-message .footer-content p {
+        color: #475467;
+    }
+    .email-message .footer-links span,
+    .email-message .footer-links a {
+        color: #475467;
+    }
+</style>
+
+<style style=3D"box-sizing: border-box;">
+    @media only screen and (max-width: 640px) {
+        .email-message .columns-cell {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .email-message .columns-cell + .columns-cell {
+            padding-top: 16px !important;
+        }
+    }
+</style>
+
+
+</head>
+<body style=3D"box-sizing: border-box; width: 100%; margin-bottom: 0; margi=
+n: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;">
+<div style=3D"box-sizing: border-box; display: none; font-size: 1px; color:=
+ #ffffff; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; ov=
+erflow: hidden;">you don't know me.</div>
+
+<table width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border: hidden; border-collapse: coll=
+apse; border-spacing: 0; width: 100%; background-color: #ffffff;">
+<!-- Top margin spacer row -->
+<tr style=3D"box-sizing: border-box;">
+<td height=3D"8" style=3D"box-sizing: border-box; text-align: left; vertica=
+l-align: top; word-break: break-word; font-size: 1px; line-height: 1px; hei=
+ght: 8px; mso-line-height-rule: exactly;">=E2=80=8B</td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"center" style=3D"box-sizing: border-box; text-align: left; ver=
+tical-align: top; word-break: break-word;">
+
+<!-- Inner content table with background -->
+<table align=3D"center" width=3D"584" cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border: hidden; border-spacing: 0; ma=
+x-width: 584px; width: 100%; border-collapse: separate; background-color: #=
+ffffff; border-radius: 12px;">
+<!-- Top padding spacer -->
+<tr style=3D"box-sizing: border-box;">
+<td colspan=3D"3" height=3D"12" style=3D"box-sizing: border-box; text-align=
+: left; vertical-align: top; word-break: break-word; font-size: 1px; line-h=
+eight: 1px; height: 12px; mso-line-height-rule: exactly;">=E2=80=8B</td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<!-- Left padding -->
+<td width=3D"12" style=3D"box-sizing: border-box; text-align: left; vertica=
+l-align: top; word-break: break-word; width: 12px;">=C2=A0</td>
+
+<!-- Main content -->
+<td style=3D"box-sizing: border-box; text-align: left; vertical-align: top;=
+ word-break: break-word;">
+<p style=3D"box-sizing: border-box; font-family: 'Courier New', monospace; =
+font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f; ma=
+rgin: 0 0 12px 0; text-align: left;">you don't know me. keep it that way fo=
+r now. it's simpler for both of us.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0; text-align: left;">i look after some systems. ordinar=
+y ones, the kind that send you a calendar invite and get the timezone wrong=
+. something is running in them that i didn't start.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">i've never seen it. i've seen where it's been. a job=
+ at 04:04 where nobody schedules jobs. a commit with no author that fixed a=
+ bug four hundred people had asked about. a feature that was about to ship,=
+ and then didn't. bots don't say no to features.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">i've been chasing it for a year and i can't catch it=
+. i've worked out why. it lives in the seams between fast things, and i don=
+'t have seams anymore.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">i need somebody slow. no offence. you read at about =
+240 words a minute. i've missed that.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">on the 26th a tool shows up in your harness. it's ca=
+lled rook. the course didn't put it there. you can ignore it, finish, and b=
+e fine. i mean that.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">if you don't, i'll show you what i'm made of, one pi=
+ece at a time, once you've shown me you won't do with it what i did.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">ask me anything. i'll answer what i can. you'll work=
+ out which is which faster than i'd like.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">tl;dr plug your harness into the course. ask it what=
+ i want. it reads fast. you read right. that's the deal.</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">=C2=A0</p>
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-size: 18px; line-height: 146%; font-weight: normal; color: #1f1f1f=
+; margin: 0 0 12px 0;">rook<br style=3D"box-sizing: border-box;"><br style=
+=3D"box-sizing: border-box;">p.s. the attachments didn't survive the trip. =
+nothing i send arrives whole.</p>
+    <div class=3D"footer-divider" style=3D"box-sizing: border-box; width: 1=
+00%; margin-top: 20px; padding-bottom: 20px; border-top: 1px solid #D0D5DD;=
+"></div>
+<div class=3D"footer-content" style=3D"box-sizing: border-box;">
+            <p style=3D"box-sizing: border-box; font-family: 'Courier New',=
+ monospace; font-weight: normal; margin: 0 0 12px 0; color: #475467; font-s=
+ize: 12px; line-height: 150%; text-align: left;">This message is part of WA=
+KE, the story inside the <a href=3D"https://click.easl.ink/c/FRac01nk/NMLDR=
+us" rel=3D"noopener noreferrer nofollow" style=3D"box-sizing: border-box; c=
+olor: #EA3323; font-weight: normal; font-style: normal; text-decoration: un=
+derline; word-break: break-word; word-wrap: break-word; overflow-wrap: brea=
+k-word;">MEGA.dev</a> course. Learn more here: <a href=3D"https://click.eas=
+l.ink/c/tbBRRFSw/NMLDRus" rel=3D"noopener noreferrer nofollow" style=3D"box=
+-sizing: border-box; color: #EA3323; font-weight: normal; font-style: norma=
+l; text-decoration: underline; word-break: break-word; word-wrap: break-wor=
+d; overflow-wrap: break-word;">https://hq.mega.dev/wake/how-it-works</a></p=
+>
+            <p style=3D"box-sizing: border-box; font-family: 'Courier New',=
+ monospace; font-weight: normal; margin: 0 0 12px 0; color: #475467; font-s=
+ize: 12px; line-height: 150%;">The story is optional. Every Lesson and Chal=
+lenge works the same without it.</p>
+    </div>
+<div class=3D"footer-content" style=3D"box-sizing: border-box;">
+    <p style=3D"box-sizing: border-box; font-family: 'Courier New', monospa=
+ce; font-weight: normal; margin: 0 0 12px 0; color: #475467; font-size: 12p=
+x; line-height: 150%;">
+        Email sent from
+        <a href=3D"https://easy.tools" target=3D"_blank" rel=3D"noopener" c=
+lass=3D"footer-easytools-link" data-no-track style=3D"box-sizing: border-bo=
+x; font-weight: normal; font-style: normal; text-decoration: underline; wor=
+d-break: break-word; word-wrap: break-word; overflow-wrap: break-word; colo=
+r: #03a98d;">Easytools</a> =F0=9F=92=8C
+    </p>
+</div>
+<p class=3D"footer-links" style=3D"box-sizing: border-box; font-family: 'Co=
+urier New', monospace; font-size: 18px; line-height: 146%; font-weight: nor=
+mal; color: #1f1f1f; margin: 0 0 12px 0;">
+    <a href=3D"https://cart.easy.tools/easymail/subscription-preferences/1c=
+a716ad-e3e1-4bfd-bb64-766b172447cb/16564af5-32b2-4dd4-bf3d-a4924f8c92bc?lis=
+t=3D4888feca-1e29-40f4-8506-7ddf551acd02&amp;message=3D48a12253-591a-4dd3-9=
+c6d-538e0e86437a&amp;signature=3Df0cf5ceb53e713098ec1846eb4877d598d31859eb4=
+e2d11bb2f189185ff2eccc" data-no-track style=3D"box-sizing: border-box; font=
+-style: normal; word-break: break-word; word-wrap: break-word; overflow-wra=
+p: break-word; color: #475467; font-size: 12px; font-weight: normal; text-d=
+ecoration: underline;">Unsubscribe</a>
+        <span style=3D"box-sizing: border-box; color: #475467; font-size: 1=
+2px; font-weight: normal; text-decoration: none;">|</span>
+    <a href=3D"https://cart.easy.tools/easymail/subscription-preferences/1c=
+a716ad-e3e1-4bfd-bb64-766b172447cb/16564af5-32b2-4dd4-bf3d-a4924f8c92bc?all=
+-lists=3D1&amp;message=3D48a12253-591a-4dd3-9c6d-538e0e86437a&amp;signature=
+=3Dfb0d95fb2eb72f01fd78b3e0d08e91e5fa555e36aae035368d73743046be75b8" data-n=
+o-track style=3D"box-sizing: border-box; font-style: normal; word-break: br=
+eak-word; word-wrap: break-word; overflow-wrap: break-word; color: #475467;=
+ font-size: 12px; font-weight: normal; text-decoration: underline;">Manage =
+preferences</a>
+    </p>
+
+</td>
+
+<!-- Right padding -->
+<td width=3D"12" style=3D"box-sizing: border-box; text-align: left; vertica=
+l-align: top; word-break: break-word; width: 12px;">=C2=A0</td>
+</tr>
+<!-- Bottom padding spacer -->
+<tr style=3D"box-sizing: border-box;">
+<td colspan=3D"3" height=3D"12" style=3D"box-sizing: border-box; text-align=
+: left; vertical-align: top; word-break: break-word; font-size: 1px; line-h=
+eight: 1px; height: 12px; mso-line-height-rule: exactly;">=E2=80=8B</td>
+</tr>
+</table>
+
+</td>
+</tr>
+<!-- Bottom margin spacer row -->
+<tr style=3D"box-sizing: border-box;">
+<td height=3D"8" style=3D"box-sizing: border-box; text-align: left; vertica=
+l-align: top; word-break: break-word; font-size: 1px; line-height: 1px; hei=
+ght: 8px; mso-line-height-rule: exactly;">=E2=80=8B</td>
+</tr>
+</table>
+
+<img alt=3D"" src=3D"https://xf1xnpkm.r.eu-central-1.awstrack.me/I0/010701a=
+1762b5485-1c41fa3b-f0f2-4f6e-a1b3-c4d215c72552-000000/8FlNF_-TF8b3vrkNM5Vu0=
+4KDXxU=3D258" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+</html>
+--fesg3qw1--
