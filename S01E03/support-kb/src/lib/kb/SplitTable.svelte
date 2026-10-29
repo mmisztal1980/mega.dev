@@ -1,14 +1,14 @@
 <script lang="ts">
   import reports from '#lib/data/reports-4471.json';
   import notes from '#lib/data/desk-notes.json';
-  import { groupByCause, uniqueById, type Cause, type Report } from '#lib/kb/causes';
+  import { groupByCause, readAs, uniqueById, type Cause, type Report } from '#lib/kb/causes';
   import { tenantOf } from '#lib/kb/locales';
 
   // One row per cause in a merged ticket, each pointing at the ticket filed for it.
   let { ticket, filed }: { ticket: number; filed: Partial<Record<Cause, string>> } = $props();
 
   const merged = $derived(uniqueById(reports as Report[]).filter((r) => r.mergedInto === ticket));
-  const groups = $derived(groupByCause(merged, tenantOf, notes.oneDayMove));
+  const groups = $derived(groupByCause(merged, tenantOf));
   const rows = $derived(reports.length - merged.length);
   const issueNo = (url: string) => `#${url.split('/').pop()}`;
 </script>
@@ -37,7 +37,15 @@
   </tbody>
 </table>
 
+{#each groups as g (g.cause)}
+  {@const moved = readAs(g, notes.oneDayMove)}
+  {#if moved}
+    <p class="note">{moved} of the <code>{g.cause}</code> reports read as a one-day move; counted under <code>{g.cause}</code> by tenant.</p>
+  {/if}
+{/each}
+
 <style>
+  .note { color: var(--muted); font-size: 0.85em; }
   .sum { font-size: 1.1rem; }
   .open td { background: var(--warn-bg); }
   .open td:last-child { color: var(--warn); font-weight: 600; }
