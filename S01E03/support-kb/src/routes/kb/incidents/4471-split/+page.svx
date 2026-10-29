@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 split · two date problems, not one'
 owner: mmisztal1980
-status: open
+status: closed
 reviewed: 2026-10-29
 signature: v1.eyJzdWIiOiI1NjE4IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMzY0OTAsImV4cCI6MTc5MzMyMjg5MH0.DTwUvdwWQVcGvnGm567fksG0GmIQKkmIHy-0hOqk1cU
 ---
@@ -19,29 +19,30 @@ signature: v1.eyJzdWIiOiI1NjE4IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYX
 </script>
 
 [#4471](/kb/incidents/4471) says one issue, one fix queued. Read report by report, it holds two
-problems, and the queued parser fix closes only the first. Each now has a ticket of its own.
+problems. Each got a ticket of its own, and both are now closed.
 
 <SplitTable ticket={4471} {filed} />
 
-<Callout kind="warn">
-The parser fix will not stop the form hint. Keep #4471 open until both tickets are closed.
+<Callout>
+#4471 closed on 5 October. <code>parser</code>: fixed (fix(dates): parse dd/mm for eu locales).
+<code>hint</code>: won't fix, the booking-v3 form is retired.
 </Callout>
 
 ## The two problems
 
 **`parser`: day and month swap.** The shared parser reads every date month first, and every
-tenant on file writes the day first. "4 March turned into 3 April." Fix: parse in the tenant's
-locale.
+tenant on file writes the day first. "4 March turned into 3 April." Fixed: the parser now reads dd/mm
+for EU locales.
 
 **`hint`: the booking-v3 form asks for the wrong order.** Its date field prints `MM/DD/YYYY`
 but reads the date day first. People type what the hint says, and the booking swaps. Only form
-reports from tenants on booking-v3. The parser fix does not touch it. Fix: print the hint in the
-order the form reads.
+reports from tenants on booking-v3. The parser fix does not touch it. Won't fix: booking-v3 is retired, so the
+hint goes with it.
 
 **Read as a one-day move.** The desk read a few `parser` reports as a date landing a day early
 (`desk-notes.json`), for example "Client in Lisbon got Tuesday. Client in Toronto got Monday."
 The cause follows the tenant, so they stay under `parser` and are footnoted under the table. If
-the parser fix ships and these keep coming, that is the time to open a ticket for them.
+these keep coming now the parser fix is out, open a ticket for them.
 
 ## How they were told apart
 
