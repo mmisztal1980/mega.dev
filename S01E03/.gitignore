@@ -1,0 +1,5 @@
+.ticket
+.receipts.json
+work/
+node_modules/
+.svelte-kit/
