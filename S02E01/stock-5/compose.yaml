@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: stock5
+      POSTGRES_PASSWORD: stock5
+      POSTGRES_DB: reorder_zajx
+    ports: ["127.0.0.1:5474:5432"]
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

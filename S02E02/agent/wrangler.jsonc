@@ -1,0 +1,16 @@
+{
+  "name": "mail-reader",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "megadevs02e02.cloud-tek.io", "custom_domain": true }],
+  "vars": {
+    "INBOX": "mmisztal1980@agentmail.to",
+    "ALLOWED_SENDERS": "rook@mail.mega.dev,mmisztal1980@gmail.com",
+    "MODEL": "claude-opus-5-5"
+  },
+  "durable_objects": { "bindings": [{ "name": "QUEUE", "class_name": "MailQueue" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["MailQueue"] }],
+  "observability": { "enabled": true }
+}
