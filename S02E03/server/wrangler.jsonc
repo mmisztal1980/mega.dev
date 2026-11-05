@@ -1,0 +1,17 @@
+{
+  "name": "toolhome",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "megadevs02e03.cloud-tek.io", "custom_domain": true }],
+  "vars": {
+    "ORIGIN": "https://megadevs02e03.cloud-tek.io",
+    "ALLOWED_ORIGINS": "https://hq.mega.dev",
+    "WHISPER_MODEL": "@cf/openai/whisper-large-v3-turbo"
+  },
+  "ai": { "binding": "AI" },
+  "durable_objects": { "bindings": [{ "name": "STORE", "class_name": "Store" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Store"] }],
+  "observability": { "enabled": true }
+}

@@ -1,0 +1,7 @@
+.dev.vars
+*.secret
+log.md
+.wrangler/
+node_modules/
+tail.log
+wrangler.local.jsonc
