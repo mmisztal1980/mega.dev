@@ -17,5 +17,8 @@ Not checked yet. The keep skill's scripts/keep-check.mjs fills this part. Never 
 - Claude Code reaches it as MCP server "toolhome" (local scope, signed in through the server's consent page) · source: S02E03/log.md:40 · how: read
 - S02E03 claim with noteA "brf7e2lw" was accepted, not solved: "The course will come back later. Claim again then." · source: S02E03/log.md:75 · how: read
 - S02E03 next step: call claim-challenge again later from any session, uuid above; the answer shape for that call is not given yet (last answer sent was {"noteA": "brf7e2lw"}) · source: S02E03/log.md:75 · how: read
+- S02E04 "two places" solved 2026-11-06 (uuid c0000000-0000-4000-8000-0000005e02e4); merge answer was the "Three fifty … @0:57" note · source: S02E04/log.md · how: ran
+- Agent tool isolation "remote" is gated in this setup and falls back to a local worktree without saying so; check the worker's cwd before trusting it ran elsewhere · source: S02E04/log.md:job-2 attempt 1 · how: ran
+- hq.mega.dev is on the allowed hosts of the human's claude.ai cloud Default environment · source: human · how: told
 
 ## Receipts
