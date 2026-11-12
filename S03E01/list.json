@@ -1,0 +1,186 @@
+{
+ "accepted": [
+  {
+   "tag": "R-M3H",
+   "text": "Newest incident at the top.",
+   "source": {
+    "file": "spec.pdf",
+    "region": {
+     "page": 1,
+     "x": 0.095,
+     "y": 0.444,
+     "w": 0.45,
+     "h": 0.033
+    }
+   }
+  },
+  {
+   "tag": "R-K8L",
+   "text": "status.json updatedAt = the ops feed's, read live, never a copy.",
+   "source": {
+    "file": "whiteboard.jpg",
+    "region": {
+     "x": 0.18,
+     "y": 0.31,
+     "w": 0.36,
+     "h": 0.12
+    }
+   }
+  },
+  {
+   "tag": "R-M9Z",
+   "text": "Banner: keep it amber, exactly this one (#f5a623).",
+   "source": {
+    "file": "screenshot.png",
+    "region": {
+     "x": 0.75,
+     "y": 0.11,
+     "w": 0.15,
+     "h": 0.13
+    }
+   }
+  },
+  {
+   "tag": "R-Z2K",
+   "text": "Every line gets its own row on the page, tram 3 included.",
+   "source": {
+    "file": "recording.mp4",
+    "at": 6.8
+   }
+  },
+  {
+   "tag": "R-H4L",
+   "text": "Footer: all times UTC.",
+   "source": {
+    "file": "recording.mp4",
+    "at": 20,
+    "region": {
+     "x": 0.675,
+     "y": 0.269,
+     "w": 0.292,
+     "h": 0.065
+    }
+   }
+  },
+  {
+   "tag": "R-K4M",
+   "text": "status.json answers with Access-Control-Allow-Origin: *.",
+   "source": {
+    "file": "memo.m4a",
+    "at": 5.52
+   }
+  },
+  {
+   "tag": "R-H8X",
+   "text": "Every status.json carries updatedAt in UTC ending in Z.",
+   "source": {
+    "file": "memo.m4a",
+    "at": 18.68
+   }
+  },
+  {
+   "tag": "R-Z5L",
+   "text": "Page heading says \"status for the night\", those exact words.",
+   "source": {
+    "file": "memo.m4a",
+    "at": 27.24
+   }
+  },
+  {
+   "tag": "R-L5Z",
+   "text": "status.json Cache-Control max-age 60 seconds or less.",
+   "source": {
+    "file": "memo.m4a",
+    "at": 34.46
+   }
+  },
+  {
+   "tag": "R-X2M",
+   "text": "Status page says \"read by tram 3 boards\".",
+   "source": {
+    "file": "https://hq.mega.dev/challenges/status-for-the-night/board?t=v1.eyJ2YXJpYW50IjoiYSIsInN1YiI6IjU2MTgiLCJhdWQiOiJib2FyZDpzdGF0dXMtZm9yLXRoZS1uaWdodCIsImlhdCI6MTc5NDI1OTgzNiwiZXhwIjoxNzk0MzQ2MjM2fQ.ZOF9gd23WjF1FhVHBAn6umeoP1Rhho4HF5IsA-aBnFA",
+    "region": {
+     "x": 0.059,
+     "y": 0.589,
+     "w": 0.394,
+     "h": 0.128
+    }
+   }
+  }
+ ],
+ "conflicts": [
+  {
+   "tag": "R-L3K",
+   "with": "R-X6H",
+   "ownerQuestion": "Dates on the page: day first like the night shift notes (05/10, R-L3K in the spec) or month first like the boards (10/05, R-X6H on the screenshot)?",
+   "source": {
+    "file": "spec.pdf",
+    "region": {
+     "page": 2,
+     "x": 0.095,
+     "y": 0.175,
+     "w": 0.85,
+     "h": 0.033
+    }
+   }
+  },
+  {
+   "tag": "R-X6H",
+   "with": "R-L3K",
+   "ownerQuestion": "Dates on the page: month first like the boards (10/05, R-X6H on the screenshot) or day first like the night shift notes (05/10, R-L3K in the spec)?",
+   "source": {
+    "file": "screenshot.png",
+    "region": {
+     "x": 0.76,
+     "y": 0.36,
+     "w": 0.15,
+     "h": 0.12
+    }
+   }
+  },
+  {
+   "tag": "R-H9K",
+   "with": "R-Z6M",
+   "ownerQuestion": "How far back does the page go: last night only, nothing older (R-H9K in the spec), or the whole week (R-Z6M on the whiteboard)?",
+   "source": {
+    "file": "spec.pdf",
+    "region": {
+     "page": 2,
+     "x": 0.095,
+     "y": 0.266,
+     "w": 0.55,
+     "h": 0.033
+    }
+   }
+  },
+  {
+   "tag": "R-Z6M",
+   "with": "R-H9K",
+   "ownerQuestion": "How far back does the page go: the whole week (R-Z6M on the whiteboard) or last night only, nothing older (R-H9K in the spec)?",
+   "source": {
+    "file": "whiteboard.jpg",
+    "region": {
+     "x": 0.18,
+     "y": 0.45,
+     "w": 0.36,
+     "h": 0.06
+    }
+   }
+  },
+  {
+   "tag": "R-X5K",
+   "with": "4471",
+   "ownerQuestion": "R-X5K says each incident names who ran it, but ops feed record 4471 (sched-prod, schedule rebuild) has author \"\u2014\": who ran 4471, or may that row show no name?",
+   "source": {
+    "file": "spec.pdf",
+    "region": {
+     "page": 1,
+     "x": 0.095,
+     "y": 0.487,
+     "w": 0.45,
+     "h": 0.034
+    }
+   }
+  }
+ ]
+}

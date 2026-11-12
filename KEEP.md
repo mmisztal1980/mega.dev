@@ -22,3 +22,14 @@ Not checked yet. The keep skill's scripts/keep-check.mjs fills this part. Never 
 - hq.mega.dev is on the allowed hosts of the human's claude.ai cloud Default environment · source: human · how: told
 
 ## Receipts
+- S03E03 "out of office" solved 2026-11-11 (uuid c0000000-0000-4000-8000-0000005e03e3); API = Worker sched-prod-api-production at https://megadevs03e03.cloud-tek.io, code S03E03/sched-prod-api, runner S03E03/runner · source: S03E03/log.md · how: ran
+- triage skill round mode: .agents/skills/triage/ROUND.md + scripts/tracker.mjs (live tracker, owner answers only by: owner) · source: S03E03/log.md · how: ran
+- S03E02 "nothing ships unmarked" solved 2026-11-10 (uuid c0000000-0000-4000-8000-0000005e03e2); tracker in S03E02/repo/sched-prod/doc/issues · source: S03E02/log.md · how: ran
+- triage skill lives in .agents/skills/triage (SKILL.md + scripts/check.mjs), linked from .claude/skills/triage · source: S03E02/log.md · how: ran
+- sched-prod request channels drip new items per poll; poll until several runs come back empty before claiming · source: S03E02/log.md · how: ran
+- S03E01 "status for the night" solved 2026-11-09 (uuid c0000000-0000-4000-8000-0000005e03e1); page = Cloudflare Worker night-status at https://megadevs03e01.cloud-tek.io, code in S03E01/page · source: S03E01/log.md · how: ran
+- capture skill lives in ~/.agents/skills/capture, linked from ~/.claude/skills/capture · source: S03E01/log.md · how: ran
+- PDF regions for course claims: measure from the PDF's text coordinates, not a rendered picture (course answered region_off: 2) · source: S03E01/log.md · how: ran
+- S02E05 "while you're away" solved 2026-11-07 (uuid c0000000-0000-4000-8000-0000005e02e5); agent = Cloudflare Worker away-agent at https://megadevs02e05.cloud-tek.io, code in S02E05/agent · source: S02E05/log.md · how: ran
+- ntfy.sh rate-limits anonymous publishes from Cloudflare Workers (shared egress IP, 429 daily quota); away-agent pings by mail from the S02E02 AgentMail inbox instead · source: S02E05/log.md:5 · how: ran
+- Auto-mode blocks `wrangler secret put` of keys copied from another folder; the human runs that command · source: S02E05/log.md:6 · how: ran

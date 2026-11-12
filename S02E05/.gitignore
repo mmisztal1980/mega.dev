@@ -1,0 +1,3 @@
+*.secret*
+log.md
+ntfy-topic.txt

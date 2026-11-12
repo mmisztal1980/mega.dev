@@ -1,0 +1,12 @@
+{
+  "name": "night-status",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "megadevs03e01.cloud-tek.io", "custom_domain": true }],
+  "vars": {
+    "FEED_URL": "https://hq.mega.dev/challenges/status-for-the-night/api/incidents/e61181243445"
+  },
+  "observability": { "enabled": true }
+}
