@@ -1,0 +1,7 @@
+log/
+.env
+.dev.vars
+*.secret
+vars.json
+starter-dl/*.zip
+starter-dl/payout-agent/host-desk/roles/*/logs/

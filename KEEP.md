@@ -22,6 +22,9 @@ Not checked yet. The keep skill's scripts/keep-check.mjs fills this part. Never 
 - hq.mega.dev is on the allowed hosts of the human's claude.ai cloud Default environment · source: human · how: told
 
 ## Receipts
+- S03E04 "show me when" solved 2026-11-12 (uuid c0000000-0000-4000-8000-0000005e03e4); board = Worker sched-prod-board at https://megadevs03e04.cloud-tek.io, build 62448d5ae6b1, code S03E04/sched-prod-board, recorders S03E04/tools/record*.mjs · source: S03E04/log.md · how: ran
+- Course step evidence for a wrong-row ack wants "expected" and "got" incident ids in the evidence block · source: S03E04/log.md · how: ran
+- build.sh stamps HEAD sha; any commit after a recording changes the live sha, so record after the last commit · source: S03E04/log.md · how: ran
 - S03E03 "out of office" solved 2026-11-11 (uuid c0000000-0000-4000-8000-0000005e03e3); API = Worker sched-prod-api-production at https://megadevs03e03.cloud-tek.io, code S03E03/sched-prod-api, runner S03E03/runner · source: S03E03/log.md · how: ran
 - triage skill round mode: .agents/skills/triage/ROUND.md + scripts/tracker.mjs (live tracker, owner answers only by: owner) · source: S03E03/log.md · how: ran
 - S03E02 "nothing ships unmarked" solved 2026-11-10 (uuid c0000000-0000-4000-8000-0000005e03e2); tracker in S03E02/repo/sched-prod/doc/issues · source: S03E02/log.md · how: ran

@@ -1,0 +1,7 @@
+Review submitted.
+
+- `h-ae0`: pass — behavior unchanged; only the local variable name changes.
+- `h-7f8`: flag — violates `why/payout-rounding.md`; payouts must use `Math.floor`, not `Math.round`.
+- `h-730`: pass — matches live setting `commissionPct: 10` from version `2026-11-17.589`.
+
+Course reply: “Review accepted: every verdict is right.”

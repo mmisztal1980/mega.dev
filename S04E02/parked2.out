@@ -1,0 +1,8 @@
+Parked tasks processed:
+
+- **#5**: account was on file → **paid 1386 EUR** to `acct_4aa6561c5d` → task finished.
+- **#14**: owner declined → task finished.
+
+Still waiting for owner: **none**.
+
+Log file: `logs/parked-2026-11-17T09-08-20-486Z.jsonl`
